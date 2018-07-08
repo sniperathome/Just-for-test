@@ -16,6 +16,11 @@ typedef long LONG;
 #include "WAVE.h"
 #include "err.h"
 
+int chkID(const char id[4]); //检查CHUNKID
+WAV_CACHE *cacheWaveFile(char *path);//创建音频文件缓存1
+void delCacheWaveFile(WAV_CACHE *cache);//删除音频文件缓存
+DWORD listWavData(WAV_CACHE *cache);//列出音频PCM数据
+
 int chkID(const char id[4]) //检查CHUNKID
 {
 	int i = 0;
